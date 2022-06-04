@@ -25,7 +25,7 @@ const createDate = (dates, idx) => {
     sortDate(dates[idx]);
   }
 
-  return n.join("-");
+  return n.join("-"); //so must n.join put it here??
 };
 
 // ! JANGAN DIMODIFIKASI
