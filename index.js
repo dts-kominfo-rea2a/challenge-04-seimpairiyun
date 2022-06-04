@@ -8,7 +8,25 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (dates, idx) => {
+  let n = [];
+  function sortDate(arr) {
+    let epochVar = Date.parse(arr) / 1000;
+    n.push(epochVar)
+    n.sort();
+    n.join("-") //why this join not working?
+  }
+
+  if (idx == undefined) {
+    dates.forEach((e) => {
+      sortDate(e);
+    });
+  } else {
+    sortDate(dates[idx]);
+  }
+
+  return n.join("-");
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
